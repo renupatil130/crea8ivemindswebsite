@@ -1,0 +1,10 @@
+# OS and editor artifacts
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+
+# Local environment files
+.env
+.env.*
