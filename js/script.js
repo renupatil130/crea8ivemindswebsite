@@ -195,17 +195,70 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  /* ---- Contact form (static — shows confirmation only) ---- */
+  /* ---- Contact form (Sends email & redirects to WhatsApp) ---- */
   var form = document.querySelector('#contact-form');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      
+      var name = document.querySelector('#name').value;
+      var phone = document.querySelector('#phone').value;
+      var email = document.querySelector('#email').value;
+      var service = document.querySelector('#service').value;
+      var message = document.querySelector('#message').value;
       var note = document.querySelector('#form-note');
+      
       if (note) {
-        note.textContent = 'Thanks! Your message details are ready — connect a form backend (e.g. Formspree/Google Sheets) or your email/WhatsApp to receive submissions.';
-        note.style.color = '#4fb3e8';
+        note.textContent = 'Sending your enquiry...';
+        note.style.color = '#ffa500';
       }
-      form.reset();
+
+      // 1. Send Email using FormSubmit (AJAX)
+      fetch('https://formsubmit.co/ajax/crea8ivemindsad@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          Name: name,
+          Phone: phone,
+          Email: email,
+          Service: service,
+          Message: message
+        })
+      })
+      .then(function (response) { return response.json(); })
+      .then(function (data) {
+        if (note) {
+          note.textContent = 'Enquiry sent successfully via Email! Opening WhatsApp to connect directly...';
+          note.style.color = '#4caf50';
+        }
+      })
+      .catch(function (error) {
+        console.error('Error sending email:', error);
+        if (note) {
+          note.textContent = 'Email dispatch paused, opening WhatsApp to continue your enquiry...';
+          note.style.color = '#ff9800';
+        }
+      });
+
+      // 2. Open WhatsApp Enquiry
+      var whatsappNumber = '918548882878';
+      var whatsappText = 'Hello Crea8ive Minds, I would like to make an enquiry:\n\n' +
+        '*Name:* ' + name + '\n' +
+        '*Phone:* ' + phone + '\n' +
+        '*Email:* ' + email + '\n' +
+        '*Service:* ' + service + '\n' +
+        '*Message:* ' + message;
+        
+      var whatsappUrl = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(whatsappText);
+      
+      // Delay opening WhatsApp slightly to allow fetch request to start
+      setTimeout(function () {
+        window.open(whatsappUrl, '_blank');
+        form.reset();
+      }, 1000);
     });
   }
 
