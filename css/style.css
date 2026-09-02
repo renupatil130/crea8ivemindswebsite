@@ -738,3 +738,41 @@ h2.section-title { font-size: clamp(2rem, 5vw, 3.6rem); max-width: 820px; }
   .branding-video-showcase { grid-template-columns: 1fr; }
 }
 
+/* ---------- Instagram Reel Embed ---------- */
+.instagram-reel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+.instagram-reel-iframe {
+  width: 100%;
+  max-width: 380px;
+  height: 520px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  background: #000;
+  overflow: hidden;
+}
+.ig-reel-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.ig-reel-card-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(220, 39, 67, 0.4);
+}
+
+
