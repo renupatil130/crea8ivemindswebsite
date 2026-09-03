@@ -962,15 +962,8 @@ h1, h2, h3, .section-title, .hero-title {
 /* Mobile Split Block Enhancements */
 @media (max-width: 768px) {
   .split-block .half {
-    padding: 36px 20px;
+    padding: 44px 24px;
     min-height: auto;
-  }
-  .split-block h2 {
-    font-size: clamp(1.75rem, 6.5vw, 2.6rem) !important;
-  }
-  .split-block .container {
-    padding-inline: 16px !important;
-    margin-top: 16px !important;
   }
 }
 
