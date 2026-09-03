@@ -259,7 +259,37 @@ document.addEventListener('DOMContentLoaded', function () {
         window.open(whatsappUrl, '_blank');
         form.reset();
       }, 1000);
+  /* ---- Mobile Video Autoplay Enforcer ---- */
+  function initMobileVideos() {
+    var videos = document.querySelectorAll('video');
+    videos.forEach(function (v) {
+      v.muted = true;
+      v.defaultMuted = true;
+      v.setAttribute('muted', '');
+      v.setAttribute('playsinline', '');
+      v.setAttribute('webkit-playsinline', '');
+
+      var playPromise = v.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(function () {
+          // If low power mode or browser policy blocked autoplay, re-attempt on user interaction
+          var userGesturePlay = function () {
+            v.play();
+            document.removeEventListener('touchstart', userGesturePlay);
+            document.removeEventListener('scroll', userGesturePlay);
+          };
+          document.addEventListener('touchstart', userGesturePlay, { passive: true, once: true });
+          document.addEventListener('scroll', userGesturePlay, { passive: true, once: true });
+        });
+      }
     });
   }
+  initMobileVideos();
+
+  // Re-check videos on tab visibility change
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) initMobileVideos();
+  });
 
 });
+
