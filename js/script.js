@@ -259,6 +259,9 @@ document.addEventListener('DOMContentLoaded', function () {
         window.open(whatsappUrl, '_blank');
         form.reset();
       }, 1000);
+    });
+  }
+
   /* ---- Mobile Video Autoplay Enforcer ---- */
   function initMobileVideos() {
     var videos = document.querySelectorAll('video');
