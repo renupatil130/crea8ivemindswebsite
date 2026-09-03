@@ -394,17 +394,7 @@ h2.section-title { font-size: clamp(2rem, 5vw, 3.6rem); max-width: 820px; }
 .nav-overlay.open { opacity: 1; visibility: visible; pointer-events: auto; }
 
 /* ---------- Splash Screen ---------- */
-.splash {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--black);
-  transition: opacity 0.7s var(--ease), visibility 0.7s var(--ease);
-}
-.splash.hide { opacity: 0; visibility: hidden; pointer-events: none; }
+.splash { display: none !important; }
 .splash-inner { text-align: center; }
 .splash-logo { width: min(60vw, 260px); margin-inline: auto; opacity: 0; transform: translateY(14px); animation: splashIn 0.9s var(--ease) 0.1s forwards; }
 .splash-word { overflow: hidden; margin-top: 18px; }
