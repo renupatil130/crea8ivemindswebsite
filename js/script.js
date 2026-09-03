@@ -179,7 +179,8 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.classList.add('active');
         var filter = btn.getAttribute('data-filter');
         workCards.forEach(function (card) {
-          var show = filter === 'all' || card.getAttribute('data-category') === filter;
+          var categories = (card.getAttribute('data-category') || '').split(/\s+/);
+          var show = filter === 'all' || categories.indexOf(filter) !== -1;
           card.style.display = show ? '' : 'none';
         });
       });
