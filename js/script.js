@@ -73,18 +73,23 @@ document.addEventListener('DOMContentLoaded', function () {
   var toggle = document.querySelector('.nav-toggle');
   var panel = document.querySelector('.mobile-panel');
   var overlay = document.querySelector('.nav-overlay');
+  var closeBtn = document.querySelector('.mp-close-btn');
   function closeMenu() {
     toggle && toggle.classList.remove('open');
     panel && panel.classList.remove('open');
     overlay && overlay.classList.remove('open');
+    document.body.style.overflow = '';
   }
   if (toggle && panel) {
     toggle.addEventListener('click', function () {
       var isOpen = panel.classList.toggle('open');
       toggle.classList.toggle('open', isOpen);
       overlay && overlay.classList.toggle('open', isOpen);
+      if (isOpen) document.body.style.overflow = 'hidden';
+      else document.body.style.overflow = '';
     });
     overlay && overlay.addEventListener('click', closeMenu);
+    closeBtn && closeBtn.addEventListener('click', closeMenu);
     panel.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', closeMenu);
     });
