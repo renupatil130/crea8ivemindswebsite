@@ -268,6 +268,39 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* ---- Theme Toggle (Dark & Warm Beige Light Mode) ---- */
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('cm_theme', theme);
+    
+    // Update theme toggle buttons aria-label and status text
+    var toggles = document.querySelectorAll('.theme-toggle');
+    toggles.forEach(function (btn) {
+      var textSpan = btn.querySelector('.theme-text');
+      if (theme === 'light') {
+        btn.setAttribute('aria-label', 'Switch to Dark Mode');
+        if (textSpan) textSpan.textContent = 'Beige';
+      } else {
+        btn.setAttribute('aria-label', 'Switch to Warm Beige Mode');
+        if (textSpan) textSpan.textContent = 'Dark';
+      }
+    });
+  }
+
+  // Determine initial theme (Default to Warm Beige / light mode)
+  var savedTheme = localStorage.getItem('cm_theme');
+  var currentTheme = (savedTheme === 'dark') ? 'dark' : 'light';
+  
+  applyTheme(currentTheme);
+
+  // Toggle button click listeners
+  document.addEventListener('click', function (e) {
+    var toggleBtn = e.target.closest('.theme-toggle');
+    if (!toggleBtn) return;
+    var activeTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    applyTheme(activeTheme);
+  });
+
   /* ---- Mobile Video Autoplay Enforcer ---- */
   function initMobileVideos() {
     var videos = document.querySelectorAll('video');

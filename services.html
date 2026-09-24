@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services — Crea8ive Minds | Branding, Web, Video, 3D &amp; Digital Marketing</title>
-<meta name="description" content="Explore all Crea8ive Minds services: branding, graphic design, website & app development, video production, 3D, SEO, social media, Meta & Google Ads, print and event branding.">
+<meta name="language" content="English">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<title>Services — Crea8ive Minds | Branding, Web, Video, 3D &amp; Digital Marketing in Karnataka</title>
+<meta name="description" content="Explore all Crea8ive Minds services in Karnataka: branding, logo design, website & app development, 3D Blender animation, video production, SEO, social media, Meta & Google Ads, print and event branding in Davangere, Bengaluru, Mysuru, Hubballi & Mangaluru.">
+<meta name="keywords" content="branding services Karnataka, web development agency Davangere, 3D Blender animation Karnataka, video editing studio Bangalore, SEO agency Davangere, digital marketing Karnataka, event branding Mysuru, Hubballi design studio">
+
+<!-- Geo Location Metadata for Karnataka -->
+<meta name="geo.region" content="IN-KA">
+<meta name="geo.placename" content="Davangere, Karnataka, India">
+<meta name="geo.position" content="14.467318;75.924108">
+<meta name="ICBM" content="14.467318, 75.924108">
+
+<!-- Canonical & OpenGraph -->
+<link rel="canonical" href="https://crea8iveminds.in/services.html">
+<meta property="og:locale" content="en_IN">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Crea8ive Minds Studio Karnataka">
+<meta property="og:title" content="Services — Crea8ive Minds | Branding, Web, Video, 3D & Digital Marketing">
+<meta property="og:description" content="Full-suite creative agency services in Davangere, Karnataka: Branding, Web/App Development, 3D Animation, Video Production & SEO.">
+<meta property="og:url" content="https://crea8iveminds.in/services.html">
+<meta property="og:image" content="assets/logo.webp">
+
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -12,17 +33,66 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+
+<!-- Instant Theme Script to prevent FOUC -->
+<script>
+  (function() {
+    var savedTheme = localStorage.getItem('cm_theme');
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  })();
+</script>
+
+<!-- Breadcrumb & Service Catalog JSON-LD Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://crea8iveminds.in/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://crea8iveminds.in/services.html" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Creative Branding & Graphic Design",
+      "provider": { "@type": "LocalBusiness", "name": "Crea8ive Minds", "address": { "@type": "PostalAddress", "addressLocality": "Davangere", "addressRegion": "Karnataka", "addressCountry": "IN" } },
+      "areaServed": "Karnataka",
+      "description": "Logos, corporate identity, shop branding, packaging, posters and restaurant menu designs."
+    },
+    {
+      "@type": "Service",
+      "name": "Website & Mobile App Development",
+      "provider": { "@type": "LocalBusiness", "name": "Crea8ive Minds" },
+      "areaServed": "Karnataka",
+      "description": "High-performance responsive web applications, mobile apps, e-commerce, and real-time dashboards."
+    },
+    {
+      "@type": "Service",
+      "name": "Video Production & 3D Blender Animation",
+      "provider": { "@type": "LocalBusiness", "name": "Crea8ive Minds" },
+      "areaServed": "Karnataka",
+      "description": "Cinematic video editing, on-location shoots, 3D Blender product rendering, and motion graphic reels."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
 <header class="site-header">
   <div class="container nav-inner">
-    <a href="index.html" class="brand"><img src="assets/logo.webp" alt="Crea8ive Minds logo"></a>
+    <a href="index.html" class="brand"><img src="assets/logo.webp" alt="Crea8ive Minds logo - Davangere Karnataka"></a>
     <nav>
       <ul class="nav-links">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li class="has-dropdown">
-          <a href="services.html" class="nav-link">Services
+          <a href="services.html" class="nav-link active">Services
             <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </a>
           <div class="dropdown">
@@ -31,6 +101,7 @@
             <a href="services.html#video"><span class="dot"></span>Video Production &amp; 3D</a>
             <a href="services.html#marketing"><span class="dot"></span>Digital Marketing &amp; SEO</a>
             <a href="services.html#print"><span class="dot"></span>Print &amp; Event Branding</a>
+            <a href="services.html#pr"><span class="dot"></span>PR &amp; Media Relations Agency</a>
           </div>
         </li>
         <li><a href="work.html" class="nav-link">Work</a></li>
@@ -39,6 +110,11 @@
       </ul>
     </nav>
     <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to Warm Beige Mode" title="Toggle Dark / Warm Beige Theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <span class="theme-text">Mode</span>
+      </button>
       <a href="contact.html" class="pill-btn solid">Get a Quote</a>
       <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
@@ -61,6 +137,7 @@
         <a href="services.html#video"><span class="dot"></span>Video Production &amp; 3D</a>
         <a href="services.html#marketing"><span class="dot"></span>Digital Marketing &amp; SEO</a>
         <a href="services.html#print"><span class="dot"></span>Print &amp; Events</a>
+        <a href="services.html#pr"><span class="dot"></span>PR &amp; Media Relations</a>
       </li>
       <li><a href="work.html" class="nav-link">Work</a></li>
       <li><a href="about.html" class="nav-link">About</a></li>
@@ -68,6 +145,11 @@
     </ul>
   </div>
   <div class="mp-footer">
+    <button class="theme-toggle" style="width:100%; justify-content:center; margin-bottom:10px;" aria-label="Switch Theme">
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <span class="theme-text">Toggle Theme Mode</span>
+    </button>
     <a href="contact.html" class="pill-btn solid">Get a Quote</a>
     <a href="https://wa.me/918548882878?text=Hello%20Crea8ive%20Minds!%20%F0%9F%91%8B%20I%27m%20reaching%20out%20from%20your%20website%20and%20would%20like%20to%20inquire%20about%20your%20creative%20services." target="_blank" rel="noopener" class="ig-reel-card-btn" style="width:100%; justify-content:center; padding:12px; background:linear-gradient(45deg, #25d366, #128c7e);">Chat on WhatsApp &rarr;</a>
     <p class="mp-footer-info">Davangere, Karnataka &bull; +91 85488 82878</p>
@@ -288,6 +370,22 @@
       <div class="tile reveal"><span class="num">02</span><h3>Posters</h3><p>Eye-catching posters for launches, offers and in-store promotion.</p></div>
       <div class="tile reveal"><span class="num">03</span><h3>Event Branding</h3><p>Backdrops, standees, stage branding and collateral for launches and conferences.</p></div>
       <div class="tile reveal"><span class="num">04</span><h3>Event Promotion</h3><p>Pre-event buzz and on-ground promotion that gets people through the door.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PR & MEDIA RELATIONS AGENCY ============ -->
+<section id="pr">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">06 &nbsp;·&nbsp; PR &amp; Media Relations Agency</div>
+      <h2 class="section-title">Public Relations &amp; Brand Reputation Management</h2>
+      <p class="section-sub">Build credibility, command media attention, and shape your brand narrative with press releases, newspaper features, media coverage, and strategic public relations across Karnataka and India.</p>
+    </div>
+    <div class="grid grid-3 gapless">
+      <div class="tile reveal"><span class="num">01</span><h3>Press Release &amp; Media Coverage</h3><p>Crafting compelling press releases and securing placement across leading print, television, and digital news publications in Karnataka and national media.</p></div>
+      <div class="tile reveal"><span class="num">02</span><h3>Brand Reputation &amp; Crisis PR</h3><p>Proactive public relations management, executive positioning, corporate announcements, and crisis communication strategies that protect your brand equity.</p></div>
+      <div class="tile reveal"><span class="num">03</span><h3>Press Conferences &amp; Event PR</h3><p>Organizing press meets, media invitations, product launch PR coverage, interview opportunities, and influencer media relations for maximum buzz.</p></div>
     </div>
   </div>
 </section>

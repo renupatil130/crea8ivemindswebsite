@@ -41,6 +41,168 @@
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
+/* ---------- Warm Beige Light Theme Overrides ---------- */
+[data-theme="light"] {
+  --black: #f5f0e6;          /* Warm sand beige primary background */
+  --black-soft: #ebe3d2;     /* Rich warm beige surface */
+  --panel: #eae2d1;          /* Card & tile background */
+  --panel-2: #dfd7c3;        /* Secondary panel background */
+  --border: rgba(65, 52, 40, 0.18);
+  --border-soft: rgba(65, 52, 40, 0.1);
+
+  --red: #ea3323;
+  --red-dark: #c22417;
+  --red-light: #ff5c4d;
+  --blue: #1d68a4;
+
+  --white: #1c1917;          /* High contrast deep espresso text for headers & display text */
+  --off-white: #2b2621;
+  --grey-300: #4a433a;
+  --grey-400: #6e6457;
+  --grey-500: #8a7d6d;
+
+  --light-bg: #e6decb;       /* Soft warm beige section background */
+  --light-bg-2: #dcd4be;
+  --light-ink: #1a1612;
+
+  --shadow-soft: 0 20px 50px -15px rgba(65, 52, 40, 0.15);
+}
+
+[data-theme="light"] .split-block .half.black {
+  background: var(--black-soft);
+  color: var(--white);
+}
+
+[data-theme="light"] .site-footer {
+  background: #e6decb;
+  border-top: 1px solid rgba(65, 52, 40, 0.15);
+  color: var(--white);
+}
+
+[data-theme="light"] .footer-brand p,
+[data-theme="light"] .footer-brand .addr,
+[data-theme="light"] .footer-brand .contact-line,
+[data-theme="light"] .footer-col a,
+[data-theme="light"] .footer-quote,
+[data-theme="light"] .footer-bottom,
+[data-theme="light"] .footer-cta .note {
+  color: #4a433a;
+}
+
+[data-theme="light"] .footer-col h4,
+[data-theme="light"] .footer-sub,
+[data-theme="light"] .footer-cta h4 {
+  color: #1c1917;
+}
+
+[data-theme="light"] .social-row a {
+  border-color: rgba(65, 52, 40, 0.25);
+  background: rgba(65, 52, 40, 0.08);
+  color: #1c1917;
+}
+
+[data-theme="light"] .social-row a:hover {
+  background: var(--red);
+  color: #ffffff;
+  border-color: var(--red);
+}
+
+[data-theme="light"] .mobile-panel {
+  background: rgba(245, 240, 230, 0.96);
+  border-left: 1px solid rgba(65, 52, 40, 0.18);
+  box-shadow: -15px 0 45px rgba(65, 52, 40, 0.15);
+}
+
+[data-theme="light"] .mobile-panel a.nav-link {
+  color: #1c1917;
+  border-bottom: 1px solid rgba(65, 52, 40, 0.1);
+}
+
+[data-theme="light"] .nav-overlay {
+  background: rgba(65, 52, 40, 0.5);
+}
+
+[data-theme="light"] .cursor-ring {
+  border-color: rgba(28, 25, 23, 0.8);
+}
+
+[data-theme="light"] .cursor-ring.grow {
+  background: rgba(28, 25, 23, 0.92);
+}
+
+[data-theme="light"] .cursor-ring.grow span {
+  color: #f5f0e6;
+}
+
+[data-theme="light"] .hero-chip.c2 {
+  background: #1c1917;
+  color: #f5f0e6;
+}
+
+[data-theme="light"] .hero-chip.c2 .circle-btn {
+  border-color: rgba(245, 240, 230, 0.4);
+  color: #f5f0e6;
+}
+
+[data-theme="light"] .pill-btn:hover {
+  background: #1c1917;
+  color: #f5f0e6;
+}
+
+[data-theme="light"] .filter-btn:hover,
+[data-theme="light"] .filter-btn.active {
+  background: #1c1917;
+  color: #f5f0e6;
+  border-color: #1c1917;
+}
+
+[data-theme="light"] .testi-card {
+  background: var(--panel);
+}
+
+/* Theme Toggle Control Button */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+  user-select: none;
+}
+
+.theme-toggle:hover {
+  border-color: var(--red);
+  color: var(--red);
+  transform: translateY(-1px);
+}
+
+.theme-toggle svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.4s var(--ease);
+}
+
+.theme-toggle .sun-icon { display: none; }
+.theme-toggle .moon-icon { display: block; }
+
+[data-theme="light"] .theme-toggle {
+  background: rgba(65, 52, 40, 0.06);
+  border-color: rgba(65, 52, 40, 0.2);
+  color: var(--white);
+}
+
+[data-theme="light"] .theme-toggle .sun-icon { display: block; }
+[data-theme="light"] .theme-toggle .moon-icon { display: none; }
+
 /* ---------- Reset ---------- */
 * , *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }

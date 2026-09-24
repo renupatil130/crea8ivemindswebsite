@@ -1,12 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Work — Crea8ive Minds Portfolio</title>
+  <meta name="language" content="English">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>Our Work — Portfolio | Crea8ive Minds Davangere, Karnataka</title>
   <meta name="description"
-    content="A look at Crea8ive Minds' project portfolio across branding, web design, video & 3D, digital marketing and print & event branding.">
+    content="Explore Crea8ive Minds' portfolio of branding, web & mobile applications, 3D Blender animation, video editing reels, and digital marketing campaigns built for clients in Davangere, Bengaluru, and Karnataka.">
+  <meta name="keywords" content="Crea8ive Minds portfolio, Karnataka branding showcase, Davangere web design portfolio, 3D Blender animation work, video production reel Karnataka">
+
+  <!-- Geo Location Metadata for Karnataka Target Audience -->
+  <meta name="geo.region" content="IN-KA">
+  <meta name="geo.placename" content="Davangere, Karnataka, India">
+  <meta name="geo.position" content="14.467318;75.924108">
+  <meta name="ICBM" content="14.467318, 75.924108">
+
+  <!-- Canonical & OpenGraph -->
+  <link rel="canonical" href="https://crea8iveminds.in/work.html">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Crea8ive Minds Studio Karnataka">
+  <meta property="og:title" content="Our Work — Portfolio | Crea8ive Minds Davangere, Karnataka">
+  <meta property="og:description" content="Portfolio of branding, web apps, 3D animation reels & marketing campaigns across Karnataka.">
+  <meta property="og:url" content="https://crea8iveminds.in/work.html">
+  <meta property="og:image" content="assets/logo.webp">
+
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -15,13 +36,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Instant Theme Script to prevent FOUC -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('cm_theme');
+      if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+
+  <!-- Breadcrumb JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://crea8iveminds.in/index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://crea8iveminds.in/work.html" }
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
   <header class="site-header">
     <div class="container nav-inner">
-      <a href="index.html" class="brand"><img src="assets/logo.webp" alt="Crea8ive Minds logo"></a>
+      <a href="index.html" class="brand"><img src="assets/logo.webp" alt="Crea8ive Minds logo - Davangere Karnataka"></a>
       <nav>
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link">Home</a></li>
@@ -37,14 +82,20 @@
               <a href="services.html#video"><span class="dot"></span>Video Production &amp; 3D</a>
               <a href="services.html#marketing"><span class="dot"></span>Digital Marketing &amp; SEO</a>
               <a href="services.html#print"><span class="dot"></span>Print &amp; Event Branding</a>
+              <a href="services.html#pr"><span class="dot"></span>PR &amp; Media Relations Agency</a>
             </div>
           </li>
-          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="work.html" class="nav-link active">Work</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
       <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to Warm Beige Mode" title="Toggle Dark / Warm Beige Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <span class="theme-text">Mode</span>
+        </button>
         <a href="contact.html" class="pill-btn solid">Get a Quote</a>
         <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
       </div>
@@ -67,6 +118,7 @@
           <a href="services.html#video"><span class="dot"></span>Video Production &amp; 3D</a>
           <a href="services.html#marketing"><span class="dot"></span>Digital Marketing &amp; SEO</a>
           <a href="services.html#print"><span class="dot"></span>Print &amp; Events</a>
+          <a href="services.html#pr"><span class="dot"></span>PR &amp; Media Relations</a>
         </li>
         <li><a href="work.html" class="nav-link active">Work</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
@@ -74,6 +126,11 @@
       </ul>
     </div>
     <div class="mp-footer">
+      <button class="theme-toggle" style="width:100%; justify-content:center; margin-bottom:10px;" aria-label="Switch Theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <span class="theme-text">Toggle Theme Mode</span>
+      </button>
       <a href="contact.html" class="pill-btn solid">Get a Quote</a>
       <a href="https://wa.me/918548882878?text=Hello%20Crea8ive%20Minds!%20%F0%9F%91%8B%20I%27m%20reaching%20out%20from%20your%20website%20and%20would%20like%20to%20inquire%20about%20your%20creative%20services." target="_blank" rel="noopener" class="ig-reel-card-btn" style="width:100%; justify-content:center; padding:12px; background:linear-gradient(45deg, #25d366, #128c7e);">Chat on WhatsApp &rarr;</a>
       <p class="mp-footer-info">Davangere, Karnataka &bull; +91 85488 82878</p>
@@ -100,13 +157,14 @@
         <button class="filter-btn" data-filter="web">Web &amp; App</button>
         <button class="filter-btn" data-filter="video">Video &amp; 3D</button>
         <button class="filter-btn" data-filter="marketing">Digital Marketing</button>
+        <button class="filter-btn" data-filter="pr">PR Agency</button>
       </div>
 
       <div class="grid grid-3 gapless" id="work-grid">
 
         <div class="work-card reveal" data-category="branding video">
-          <div class="work-thumb">
-            <video class="work-video" src="assets/alien-splash-1080x1920.mp4" autoplay loop muted playsinline webkit-playsinline poster="assets/alien-splash-1080x1920_poster.webp"></video>
+          <div class="work-thumb" style="background:#161616;">
+            <video class="work-video" src="assets/alien-splash-1080x1920.mp4" autoplay loop muted playsinline webkit-playsinline preload="auto"></video>
             <span class="cat-badge">Motion Branding</span>
           </div>
           <div class="work-info">
@@ -115,8 +173,8 @@
         </div>
 
         <a href="https://urban-intel-virid.vercel.app/" target="_blank" rel="noopener" class="work-card reveal reveal-delay-1" data-category="web video" data-cursor="Live Demo">
-          <div class="work-thumb">
-            <video class="work-video" src="assets/urban-intel-app.mp4" autoplay loop muted playsinline webkit-playsinline poster="assets/urban-intel-app_poster.webp"></video>
+          <div class="work-thumb" style="background:#161616;">
+            <video class="work-video" src="assets/urban-intel-app.mp4" autoplay loop muted playsinline webkit-playsinline preload="auto"></video>
             <span class="cat-badge" style="background:var(--blue);">Web &amp; App</span>
           </div>
           <div class="work-info">
@@ -125,8 +183,8 @@
         </a>
 
         <a href="https://strength-arena.vercel.app/" target="_blank" rel="noopener" class="work-card reveal reveal-delay-2" data-category="web video" data-cursor="Live Demo">
-          <div class="work-thumb">
-            <video class="work-video" src="assets/strength-arena-app.mp4" autoplay loop muted playsinline webkit-playsinline poster="assets/strength-arena-app_poster.webp"></video>
+          <div class="work-thumb" style="background:#161616;">
+            <video class="work-video" src="assets/strength-arena-app.mp4" autoplay loop muted playsinline webkit-playsinline preload="auto"></video>
             <span class="cat-badge" style="background:var(--red);">Web &amp; App</span>
           </div>
           <div class="work-info">
@@ -144,19 +202,19 @@
           </div>
         </a>
 
-        <div class="work-card reveal reveal-delay-1" data-category="marketing branding">
+        <div class="work-card reveal reveal-delay-1" data-category="marketing branding pr">
           <div class="work-thumb" style="background:#0a0a0a; display:flex; align-items:center; justify-content:center; padding:18px;">
-            <img src="assets/marketing-brand-logo.png" alt="Taradas Jewellers Logo" style="max-height:85%; object-fit:contain;">
-            <span class="cat-badge">Branding &amp; Marketing</span>
+            <img src="assets/marketing-brand-logo.png" alt="Taradas Jewellers Brand & PR Campaign" style="max-height:85%; object-fit:contain;">
+            <span class="cat-badge">PR &amp; Brand Media</span>
           </div>
           <div class="work-info">
-            <h3>Taradas Jewellers</h3><span>Luxury Brand Identity &amp; Campaign</span>
+            <h3>Taradas Jewellers PR &amp; Media</h3><span>Press Release &amp; Brand Launch</span>
           </div>
         </div>
 
         <a href="https://www.instagram.com/reel/DXqnHasj8qL/?igsi=MWN2ejczcG44aHl5ZA==" target="_blank" rel="noopener" class="work-card reveal reveal-delay-2" data-category="video" data-cursor="Watch Reel">
-          <div class="work-thumb">
-            <video class="work-video" src="assets/video-editing-reel.mp4" autoplay loop muted playsinline webkit-playsinline poster="assets/video-editing-reel_poster.webp"></video>
+          <div class="work-thumb" style="background:#161616;">
+            <video class="work-video" src="assets/video-editing-reel.mp4" autoplay loop muted playsinline webkit-playsinline preload="auto"></video>
             <span class="cat-badge" style="background:var(--blue);">Video Editing</span>
           </div>
           <div class="work-info">
@@ -165,8 +223,8 @@
         </a>
 
         <a href="https://www.instagram.com/reel/DbTCPQti7Ks/?igsi=YTVncjJxMzl4bHN6" target="_blank" rel="noopener" class="work-card reveal" data-category="video" data-cursor="Watch Reel">
-          <div class="work-thumb">
-            <video class="work-video" src="assets/blender-3d-reel.mp4" autoplay loop muted playsinline webkit-playsinline poster="assets/blender-3d-reel_poster.webp"></video>
+          <div class="work-thumb" style="background:#161616;">
+            <video class="work-video" src="assets/blender-3d-reel.mp4" autoplay loop muted playsinline webkit-playsinline preload="auto"></video>
             <span class="cat-badge" style="background:var(--red);">3D Blender Animation</span>
           </div>
           <div class="work-info">
@@ -175,8 +233,8 @@
         </a>
 
         <div class="work-card reveal reveal-delay-1" data-category="web video">
-          <div class="work-thumb">
-            <video class="work-video" src="assets/webapp-splash-animation.mp4" autoplay loop muted playsinline webkit-playsinline poster="assets/webapp-splash-animation_poster.webp"></video>
+          <div class="work-thumb" style="background:#161616;">
+            <video class="work-video" src="assets/webapp-splash-animation.mp4" autoplay loop muted playsinline webkit-playsinline preload="auto"></video>
             <span class="cat-badge">Web &amp; App Motion</span>
           </div>
           <div class="work-info">
